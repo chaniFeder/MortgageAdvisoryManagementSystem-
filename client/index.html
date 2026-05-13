@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="he">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chani & Esther - Client</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>מערכת הגשת משימות</h1>
+    <nav id="nav">
+      <button id="btn-login">התחברות</button>
+      <button id="btn-register">הרשמה</button>
+      <button id="btn-student" class="hidden">תלמידה</button>
+      <button id="btn-teacher" class="hidden">מורה</button>
+      <button id="btn-logout" class="hidden">התנתקות</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="messages"></section>
+
+    <section id="panel-login" class="panel">
+      <h2>התחברות</h2>
+      <form id="form-login">
+        <label>תעודת זהות (9 ספרות)
+          <input name="userId" required maxlength="9" minlength="9" pattern="\d{9}" placeholder="123456789">
+          <small class="input-hint">הכנס ת"ז (9 ספרות)</small>
+          <div class="input-error" id="login-userid-error"></div>
+        </label>
+        <label>סיסמה
+          <input name="password" type="password" required minlength="8"
+            placeholder="סיסמה (לפחות 8 תווים, אותיות וספרות)">
+          <small class="input-hint">לפחות 8 תווים, אותיות וספרות</small>
+          <div class="input-error" id="login-password-error"></div>
+        </label>
+        <div class="actions">
+          <button type="submit">התחבר</button>
+        </div>
+      </form>
+      <div class="auth-switch">
+        <p>עדיין אין לך חשבון? <button type="button" id="switch-to-register">הירשמי כאן</button></p>
+      </div>
+    </section>
+
+    <section id="panel-register" class="panel hidden">
+      <h2>הרשמה</h2>
+      <form id="form-register">
+        <label>תעודת זהות (9 ספרות)
+          <input name="userId" required maxlength="9" minlength="9" pattern="\d{9}" placeholder="123456789">
+          <small class="input-hint">הכנס ת"ז (9 ספרות)</small>
+          <div class="input-error" id="register-userid-error"></div>
+        </label>
+        <label>שם מלא
+          <input name="name" required placeholder="שם מלא">
+          <small class="input-hint">הכנס שם מלא</small>
+          <div class="input-error" id="register-name-error"></div>
+        </label>
+        <label>כתובת מייל
+          <input name="email" type="email" placeholder="example@email.com">
+          <small class="input-hint">כתובת מייל תקינה (לא חובה)</small>
+          <div class="input-error" id="register-email-error"></div>
+        </label>
+        <label>סיסמה
+          <input name="password" type="password" required minlength="8"
+            placeholder="סיסמה (לפחות 8 תווים, אותיות וספרות)">
+          <small class="input-hint">לפחות 8 תווים, אותיות וספרות</small>
+          <div class="input-error" id="register-password-error"></div>
+        </label>
+        <label>תפקיד
+          <select name="role">
+            <option value="student">תלמידה</option>
+            <option value="teacher">מורה</option>
+          </select>
+          <small class="input-hint">בחר תפקיד</small>
+          <div class="input-error" id="register-role-error"></div>
+        </label>
+        <div class="actions">
+          <button type="submit">הירשמי</button>
+        </div>
+      </form>
+      <div class="auth-switch">
+        <p>כבר יש לך חשבון? <button type="button" id="switch-to-login">התחברי כאן</button></p>
+      </div>
+    </section>
+
+    <section id="panel-student" class="panel hidden">
+      <h2>לוח תלמידה</h2>
+      <div class="card">
+        <h3>📚 משימות פתוחות</h3>
+        <div id="assignments-cards"></div>
+      </div>
+
+      <div class="card">
+        <h3>📄 ההגשות שלי</h3>
+        <ul id="my-submissions"></ul>
+      </div>
+    </section>
+
+    <section id="panel-teacher" class="panel hidden">
+      <h2>לוח מורה</h2>
+      <div class="card">
+        <h3>➕ יצירת משימה חדשה</h3>
+        <form id="form-assignment">
+          <label>כותרת
+            <input name="title" required placeholder="כותרת המשימה">
+            <small class="input-hint">הכנס כותרת ברורה למשימה</small>
+            <div class="input-error" id="assignment-title-error"></div>
+          </label>
+          <label>תיאור
+            <textarea name="description" placeholder="תיאור המשימה"></textarea>
+            <small class="input-hint">תיאור מפורט של המשימה (לא חובה)</small>
+            <div class="input-error" id="assignment-description-error"></div>
+          </label>
+          <label>תאריך הגשה
+            <input name="dueDate" type="date" required>
+            <small class="input-hint">בחר תאריך הגשה</small>
+            <div class="input-error" id="assignment-duedate-error"></div>
+          </label>
+          <div class="actions"><button type="submit">➕ יצירה</button></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>📄 כל ההגשות</h3>
+        <div id="submissions-container"></div>
+      </div>
+
+      <div class="card">
+        <h3>📈 סטטיסטיקות</h3>
+        <button id="btn-get-averages">📈 הצג ממוצעים</button>
+        <ul id="averages-list"></ul>
+      </div>
+    </section>
+    <!-- Modal for submission -->
+    <div id="submission-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>📤 הגשת עבודה</h3>
+          <button class="modal-close" onclick="closeSubmissionModal()">&times;</button>
+        </div>
+        <form id="form-submission">
+          <input type="hidden" name="assignmentId" id="modal-assignment-id">
+          <div class="assignment-info" id="modal-assignment-info"></div>
+          <label>קישור GitHub
+            <input name="gitHubLink" required type="url" placeholder="https://github.com/user/repo">
+            <small class="input-hint">קישור מלא לריפוזיטורי ב-GitHub</small>
+            <div class="input-error" id="submission-github-error"></div>
+          </label>
+          <label>ת"ז שותף (לא חובה)
+            <input name="partner" pattern="\d{9}" placeholder="123456789">
+            <small class="input-hint">ת"ز של שותף (9 ספרות, לא חובה)</small>
+            <div class="input-error" id="submission-partner-error"></div>
+          </label>
+          <div class="actions">
+            <button type="button" onclick="closeSubmissionModal()" class="btn-secondary">ביטול</button>
+            <button type="submit">📤 הגש</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <footer class="footer">
+    <small>💻 מערכת ניהול משימות - חני ואסתר</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
