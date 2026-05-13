@@ -1,0 +1,1189 @@
+{
+	"info": {
+		"_postman_id": "a9d19a1f-2938-4c4b-bbc0-45f301e315f8",
+		"name": "ChaniAndEstherProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49548763",
+		"_collection_link": "https://estherjoseph-9930004.postman.co/workspace/EstherJoseph's-Workspace~866905cf-5388-48eb-8c6e-5584cb76fd85/collection/49548763-a9d19a1f-2938-4c4b-bbc0-45f301e315f8?action=share&source=collection_link&creator=49548763"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "1_RegisterStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"241879587\",\r\n  \"name\": \"Esther\",\r\n  \"email\": \"e@gmail.com\",\r\n  \"password\": \"esther1234\",\r\n  \"role\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_RegisterStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"123456789\",\r\n  \"name\": \"elisheva\",\r\n  \"email\": \"elisheva@gmail.com\",\r\n  \"password\": \"elisheva1234\",\r\n  \"role\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_RegisterTeacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"142589637\",\r\n  \"name\": \"chani\",\r\n  \"email\": \"chani@gmail.com\",\r\n  \"password\": \"chani1234\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_RegisterTeacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"142578963\",\r\n  \"name\": \"Miriam\",\r\n  \"email\": \"Miriam@gmail.com\",\r\n  \"password\": \"miriam1234\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5_ErrorUserAlreadyExistsById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"123456789\",\r\n  \"name\": \"Esther\",\r\n  \"email\": \"u@gmail.com\",\r\n  \"password\": \"esther1234\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6_ErrorUserExistdByEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123477788\",\r\n    \"name\": \"Chani\",\r\n    \"email\": \"chani@gmail.com\",\r\n    \"password\": \"aaaa3333\",\r\n    \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7_ErrorNoPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"123456789\",\r\n  \"name\": \"Esther\",\r\n  \"email\": \"e@gmail.com\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "8_ErrorDoesn'tContainDigits",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\":\"123456789\",\r\n  \"name\": \"Esther\",\r\n  \"email\": \"e@gmail.com\",\r\n  \"password\":\"aaaaaaaa\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "9_ErrorShortPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123456789\",\r\n    \"name\": \"Esther\",\r\n    \"email\": \"e@gmail.com\",\r\n    \"password\": \"a3\",\r\n    \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "10_ErrorMissingID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Esther\",\r\n    \"email\": \"e@gmail.com\",\r\n    \"password\": \"a312345689\",\r\n    \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "11_ErrorMissingName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"123456780\",\r\n    \"email\": \"e@gmail.com\",\r\n    \"password\": \"a312345689\",\r\n    \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12_LoginStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"241879587\",\r\n    \"password\": \"esther1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "12_LoginStudent Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"123456789\",\r\n    \"password\": \"elisheva1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "13_LoginTeacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"142589637\",\r\n    \"password\": \"chani1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "14_LoginErrorNoID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"esther1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "15_LoginErrorUserDoesn'tExist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"12348574\",\r\n    \"password\": \"esther1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "16_LoginErrorWrongPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"241879587\",\r\n    \"password\": \"esther1235\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "17_createAssignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"exe1\",\r\n    \"description\": \"my first assignment\",\r\n    \"dueDate\": \"2026-02-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "18_createAssignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"exe2\",\r\n    \"description\": \"my second assignment\",\r\n    \"dueDate\": \"2026-03-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "19_createAssignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"exe3\",\r\n    \"description\": \"my third assignment\",\r\n    \"dueDate\": \"2026-04-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "20_createClosedAssignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "//isOpen יצרתי כזאת בקשה כדי להראות שהתאריכים עובדים נכון והוא באמת מעדכן את ה \r\n{\r\n    \"title\": \"exe4\",\r\n    \"description\": \"my third assignment\",\r\n    \"dueDate\": \"2025-04-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "21_ErrorMissingAuthorization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"exe3\",\r\n    \"description\": \"my third assignment\",\r\n    \"dueDate\": \"2026-04-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "22_ErrorForbbidenAuthorization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MTg3OTU4NyIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY3MjkyMjk0LCJleHAiOjE3OTg4MjgyOTR9.uyG1W35sIOiKEfVnjd--TdD5CVctOd1c9qcslFy4GvU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"exe3\",\r\n    \"description\": \"my third assignment\",\r\n    \"dueDate\": \"2026-04-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "27_getSubmissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/submissions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "28_updateSubmission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grade\":97,\r\n    \"feedback\":\"Nice job! I really liked the way you answered!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/submissions/123456789/6956bde9d7c7b29ff2bd6081",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"submissions",
+								"123456789",
+								"6956bde9d7c7b29ff2bd6081"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "29_ErrorCantFindSubmission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grade\":86,\r\n    \"feedback\":\"Nice job! I really liked the way you answered!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/submissions/999999999/6951901979decb6aa71588ac",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"submissions",
+								"999999999",
+								"6951901979decb6aa71588ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "30_getAveragesOfAllSumbmissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MjU4OTYzNyIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2OTUyODcxLCJleHAiOjE3OTg0ODg4NzF9.tNqjhsexO6Zbnj6atzWMUYompw9D9zP906ye8M4Bqgk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/teacher/stats/averages",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"teacher",
+								"stats",
+								"averages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "23_createSubmission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI0MTg3OTU4NyIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY3MjkyMjk0LCJleHAiOjE3OTg4MjgyOTR9.uyG1W35sIOiKEfVnjd--TdD5CVctOd1c9qcslFy4GvU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\": \"6956bdbcd7c7b29ff2bd607d\",\r\n    \"gitHubLink\": \"https://github.com/EstherJoseph7/Project_NodeJS.git\",\r\n    \"partner\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24_createSubmissionWithOutPartner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY3MjkyNTU5LCJleHAiOjE3OTg4Mjg1NTl9.E2diezDdANWc30k3DuL79fTHQaK6-EqpFw8EWFDWKM0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\": \"6956bdd7d7c7b29ff2bd607f\",\r\n    \"gitHubLink\": \"https://github.com/EstherJoseph7/Project_NodeJS.git\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "25_createSubmission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY3MjkyNTU5LCJleHAiOjE3OTg4Mjg1NTl9.E2diezDdANWc30k3DuL79fTHQaK6-EqpFw8EWFDWKM0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assignmentId\": \"6956bde9d7c7b29ff2bd6081\",\r\n    \"gitHubLink\": \"https://github.com/EstherJoseph7/Project_NodeJS.git\",\r\n    \"partner\": \"241879587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "26_ErrorMissingAssignmentID",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY2OTUzNjYwLCJleHAiOjE3OTg0ODk2NjB9.X1tnoJYCag804W30ZAG5rAJFAX8bFZDYFmWbif2bb2U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gitHubLink\": \"https://github.com/EstherJoseph7/Project_NodeJS.git\",\r\n    \"partner\": \"241879587\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "31_getOpenAssignments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMyNTY0NzE4OSIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzY2MjUyNTY0LCJleHAiOjE3OTc3ODg1NjR9.cXcKqB-oJwjxYCCUxyczM2pVV52yGX-1c6JKO_mnpx8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/assignments",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"assignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "32_getMySubmissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzY2OTUzNjYwLCJleHAiOjE3OTg0ODk2NjB9.X1tnoJYCag804W30ZAG5rAJFAX8bFZDYFmWbif2bb2U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions/me",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "33_ErrorMissingAuthorization",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/student/submissions/me",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"student",
+								"submissions",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
